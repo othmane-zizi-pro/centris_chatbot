@@ -13,9 +13,9 @@ universities_dict = {
     "5": "Polytechnique Montréal"
 }
 accommodation_dict = {
-    "1": "Condo/Apartment",
-    "2": "Townhouse",
-    "3": "No Preference"
+    "1": "No Preference",
+    "2": "Condo/Apartment",
+    "3": "Townhouse"
 }
 bedrooms_townhouse_dict = {
     "1": "2 Bedrooms",
@@ -56,8 +56,8 @@ appliances_dict = {
     "6": "Microwave"
 }
 yes_no_dict = {
-    "1": "yes",
-    "2": "no preference"
+    "1": "no preference",
+    "2": "yes"
 }
 
 # Streamlit app layout
