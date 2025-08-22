@@ -4,7 +4,6 @@ from numpy.linalg import norm
 import plotly.graph_objects as go
 from buildings_data import buildings  # Import the buildings dictionary
 
-
 # Define option dictionaries
 universities_dict = {
     "1": "McGill University",
@@ -137,7 +136,20 @@ preferences = {
 }
 
 if st.button("Get Recommendations"):
-    st.write("User Preferences:", preferences)
+    # Display user preferences nicely
+    st.header("Your Preferences")
+    st.write(f"**Name:** {preferences['name']}")
+    st.write(f"**University:** {preferences['university']}")
+    st.write(f"**Within 1km of Campus:** {preferences['within_1km_campus']}")
+    st.write(f"**Within 500m of Metro:** {preferences['within_500m_metro']}")
+    st.write(f"**Accommodation Type:** {preferences['accommodation']}")
+    st.write(f"**Number of Bedrooms:** {preferences['bedrooms']}")
+    st.write(f"**Over 10 Floors:** {preferences['over_ten_floors']}")
+    st.write(f"**Price Range:** ${preferences['min_price']} - ${preferences['max_price']}")
+    amenities_str = ', '.join(preferences['amenities']) if isinstance(preferences['amenities'], list) else preferences['amenities']
+    st.write(f"**Amenities:** {amenities_str}")
+    appliances_str = ', '.join(preferences['appliances']) if isinstance(preferences['appliances'], list) else preferences['appliances']
+    st.write(f"**Appliances:** {appliances_str}")
 
     # Recommend function (adapted from your code)
     def recommend(preferences, buildings):
@@ -251,16 +263,22 @@ if st.button("Get Recommendations"):
         st.plotly_chart(fig)
     
         for sim, name in sims[:10]:  # Top 10
-            st.write(f"{name}: similarity score {sim:.4f}")
+            st.markdown(f"**{name}**: *similarity score {sim:.4f}*")
             data = buildings.get(name, {})
-            st.write(f" Accommodation: {data.get('accommodation', 'Unknown')}")
-            st.write(f" Unit Types: {', '.join(data.get('unit_types', [])) or 'None'}")
-            st.write(f" Amenities: {', '.join(data.get('amenities', [])) or 'None'}")
-            st.write(f" Appliances: {', '.join(data.get('appliances', [])) or 'None'}")
-            st.write(f" Distance to {university}: {data.get('distance_to_campuses_km', {}).get(university, 'Unknown')} km")
-            st.write(f" Within 500m of Metro: {data.get('within_500m_metro', 'Unknown')}")
-            st.write(f" Prices Monthly: {', '.join([f'{k}: ${v}' for k, v in data.get('prices_monthly', {}).items()]) or 'None'}")
-            st.write(f" Over 10 Floors: {data.get('over_ten_floors', 'Unknown')}")
-            st.write()  # Empty line for readability
+            st.write(f"**Accommodation:** {data.get('accommodation', 'Unknown')}")
+            st.write(f"**Unit Types:** {', '.join(data.get('unit_types', [])) or 'None'}")
+            st.write(f"**Amenities:** {', '.join(data.get('amenities', [])) or 'None'}")
+            st.write(f"**Appliances:** {', '.join(data.get('appliances', [])) or 'None'}")
+            st.write(f"**Distance to {university}:** {data.get('distance_to_campuses_km', {}).get(university, 'Unknown')} km")
+            st.write(f"**Within 500m of Metro:** {data.get('within_500m_metro', 'Unknown')}")
+            st.write("**Prices Monthly:**")
+            prices = data.get('prices_monthly', {})
+            if prices:
+                for k, v in prices.items():
+                    st.write(f"- {k}: ${v}")
+            else:
+                st.write("None")
+            st.write(f"**Over 10 Floors:** {data.get('over_ten_floors', 'Unknown')}")
+            st.markdown("---")  # Horizontal line for separation and white space
 
     recommend(preferences, buildings)
