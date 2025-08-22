@@ -29,7 +29,7 @@ buildings = {
       "HEC Montréal": 2.934,
       "Polytechnique Montréal": 3.156
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Mont-Royal Residences": {
     "accommodation": "Townhouse",
@@ -59,11 +59,11 @@ buildings = {
       "HEC Montréal": 4.449,
       "Polytechnique Montréal": 8.796
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La Édouard-Montpetit Gardens 17": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -90,11 +90,11 @@ buildings = {
       "HEC Montréal": 4.001,
       "Polytechnique Montréal": 4.55
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Gouin Maison": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -120,11 +120,11 @@ buildings = {
       "HEC Montréal": 8.321,
       "Polytechnique Montréal": 3.201
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La Outremont Tower": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -150,11 +150,11 @@ buildings = {
       "HEC Montréal": 5.771,
       "Polytechnique Montréal": 9.713
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Le Clark Maison": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -180,11 +180,11 @@ buildings = {
       "HEC Montréal": 9.384,
       "Polytechnique Montréal": 8.666
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les Masson Terraces": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -213,7 +213,7 @@ buildings = {
       "HEC Montréal": 2.65,
       "Polytechnique Montréal": 4.526
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les De La Montagne Commons": {
     "accommodation": "Townhouse",
@@ -245,11 +245,11 @@ buildings = {
       "HEC Montréal": 0.441,
       "Polytechnique Montréal": 8.125
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The St-Hubert Place 53": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -275,11 +275,11 @@ buildings = {
       "HEC Montréal": 7.861,
       "Polytechnique Montréal": 6.725
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La St-Catherine Maison": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -310,7 +310,7 @@ buildings = {
       "HEC Montréal": 0.495,
       "Polytechnique Montréal": 6.139
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Gouin Terraces 95": {
     "accommodation": "Townhouse",
@@ -340,11 +340,11 @@ buildings = {
       "HEC Montréal": 0.093,
       "Polytechnique Montréal": 3.755
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Beaver Hall Place 3": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -373,7 +373,7 @@ buildings = {
       "HEC Montréal": 3.944,
       "Polytechnique Montréal": 1.39
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les Hutchison Parc": {
     "accommodation": "Townhouse",
@@ -406,11 +406,11 @@ buildings = {
       "HEC Montréal": 0.072,
       "Polytechnique Montréal": 9.575
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les St-Hubert Court": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -439,11 +439,11 @@ buildings = {
       "HEC Montréal": 0.465,
       "Polytechnique Montréal": 0.89
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les Villeray Parc": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom"
     ],
@@ -468,11 +468,11 @@ buildings = {
       "HEC Montréal": 1.72,
       "Polytechnique Montréal": 5.276
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les St-Catherine Gardens 16": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom"
     ],
@@ -496,7 +496,7 @@ buildings = {
       "HEC Montréal": 9.588,
       "Polytechnique Montréal": 0.425
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La Milton Place": {
     "accommodation": "Townhouse",
@@ -526,7 +526,7 @@ buildings = {
       "HEC Montréal": 0.123,
       "Polytechnique Montréal": 1.152
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Berri Residences": {
     "accommodation": "Townhouse",
@@ -558,7 +558,7 @@ buildings = {
       "HEC Montréal": 1.438,
       "Polytechnique Montréal": 2.285
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les Atwater Vista": {
     "accommodation": "Townhouse",
@@ -589,11 +589,11 @@ buildings = {
       "HEC Montréal": 5.969,
       "Polytechnique Montréal": 1.391
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Van Horne Flats": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -620,11 +620,11 @@ buildings = {
       "HEC Montréal": 3.427,
       "Polytechnique Montréal": 9.688
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Jeanne-Mance Parc 81": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -653,7 +653,7 @@ buildings = {
       "HEC Montréal": 0.26,
       "Polytechnique Montréal": 5.647
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Milton Flats": {
     "accommodation": "Townhouse",
@@ -681,11 +681,11 @@ buildings = {
       "HEC Montréal": 6.766,
       "Polytechnique Montréal": 6.454
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "The Viger Maison 70": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -713,7 +713,7 @@ buildings = {
       "HEC Montréal": 0.195,
       "Polytechnique Montréal": 9.438
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La Jean-Talon Place": {
     "accommodation": "Townhouse",
@@ -745,11 +745,11 @@ buildings = {
       "HEC Montréal": 2.696,
       "Polytechnique Montréal": 7.938
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Milton Gardens": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -777,11 +777,11 @@ buildings = {
       "HEC Montréal": 0.883,
       "Polytechnique Montréal": 0.064
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Clark Square 7": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom"
@@ -807,11 +807,11 @@ buildings = {
       "HEC Montréal": 9.707,
       "Polytechnique Montréal": 9.886
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Crescent Commons 5": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -838,7 +838,7 @@ buildings = {
       "HEC Montréal": 0.08,
       "Polytechnique Montréal": 9.29
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Bleury Pavilions 22": {
     "accommodation": "Townhouse",
@@ -870,11 +870,11 @@ buildings = {
       "HEC Montréal": 2.35,
       "Polytechnique Montréal": 2.492
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Peel Residences 28": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -903,11 +903,11 @@ buildings = {
       "HEC Montréal": 8.702,
       "Polytechnique Montréal": 0.288
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les Notre-Dame Square": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -934,11 +934,11 @@ buildings = {
       "HEC Montréal": 0.394,
       "Polytechnique Montréal": 3.73
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "The Bishop Maison 51": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -966,11 +966,11 @@ buildings = {
       "HEC Montréal": 0.429,
       "Polytechnique Montréal": 1.899
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Côte-St-Luc Place": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -998,7 +998,7 @@ buildings = {
       "HEC Montréal": 4.005,
       "Polytechnique Montréal": 0.244
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Hochelaga Commons 75": {
     "accommodation": "Townhouse",
@@ -1028,11 +1028,11 @@ buildings = {
       "HEC Montréal": 0.062,
       "Polytechnique Montréal": 4.132
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La De Maisonneuve Commons": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -1059,11 +1059,11 @@ buildings = {
       "HEC Montréal": 7.297,
       "Polytechnique Montréal": 6.71
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Villeray Parc 31": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -1093,11 +1093,11 @@ buildings = {
       "HEC Montréal": 6.408,
       "Polytechnique Montréal": 4.536
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The St-Catherine Residences": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -1123,11 +1123,11 @@ buildings = {
       "HEC Montréal": 9.203,
       "Polytechnique Montréal": 7.489
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les Gouin Commons 75": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -1153,7 +1153,7 @@ buildings = {
       "HEC Montréal": 9.701,
       "Polytechnique Montréal": 0.285
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "The Jarry Place": {
     "accommodation": "Townhouse",
@@ -1183,11 +1183,11 @@ buildings = {
       "HEC Montréal": 3.157,
       "Polytechnique Montréal": 0.382
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les Drummond Vista": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -1217,11 +1217,11 @@ buildings = {
       "HEC Montréal": 0.901,
       "Polytechnique Montréal": 0.49
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Le St-Urbain Place 78": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -1250,7 +1250,7 @@ buildings = {
       "HEC Montréal": 2.649,
       "Polytechnique Montréal": 0.676
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La Clark Vista": {
     "accommodation": "Townhouse",
@@ -1282,11 +1282,11 @@ buildings = {
       "HEC Montréal": 6.642,
       "Polytechnique Montréal": 7.167
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La Jarry Vista 74": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -1316,11 +1316,11 @@ buildings = {
       "HEC Montréal": 8.057,
       "Polytechnique Montréal": 4.063
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Cherrier Parc": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -1350,11 +1350,11 @@ buildings = {
       "HEC Montréal": 8.492,
       "Polytechnique Montréal": 0.11
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Côte-St-Luc Pavilions": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom"
     ],
@@ -1379,11 +1379,11 @@ buildings = {
       "HEC Montréal": 3.16,
       "Polytechnique Montréal": 0.231
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La Van Horne Manor 58": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -1411,11 +1411,11 @@ buildings = {
       "HEC Montréal": 3.403,
       "Polytechnique Montréal": 6.15
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La Crescent Square": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom"
     ],
@@ -1441,7 +1441,7 @@ buildings = {
       "HEC Montréal": 1.982,
       "Polytechnique Montréal": 2.278
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le De La Montagne Square": {
     "accommodation": "Townhouse",
@@ -1472,7 +1472,7 @@ buildings = {
       "HEC Montréal": 8.796,
       "Polytechnique Montréal": 4.599
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Crescent Square": {
     "accommodation": "Townhouse",
@@ -1504,7 +1504,7 @@ buildings = {
       "HEC Montréal": 4.423,
       "Polytechnique Montréal": 0.41
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Le Berri Parc": {
     "accommodation": "Townhouse",
@@ -1533,11 +1533,11 @@ buildings = {
       "HEC Montréal": 8.669,
       "Polytechnique Montréal": 7.08
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Côte-des-Neiges Court 50": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -1564,7 +1564,7 @@ buildings = {
       "HEC Montréal": 9.397,
       "Polytechnique Montréal": 7.821
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La Jeanne-Mance Vista": {
     "accommodation": "Townhouse",
@@ -1596,11 +1596,11 @@ buildings = {
       "HEC Montréal": 4.886,
       "Polytechnique Montréal": 6.918
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les Jarry Maison": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "1 Bedroom"
     ],
@@ -1625,7 +1625,7 @@ buildings = {
       "HEC Montréal": 2.155,
       "Polytechnique Montréal": 7.642
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Milton Square": {
     "accommodation": "Townhouse",
@@ -1657,7 +1657,7 @@ buildings = {
       "HEC Montréal": 0.883,
       "Polytechnique Montréal": 7.03
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Le De Bullion Square": {
     "accommodation": "Townhouse",
@@ -1688,11 +1688,11 @@ buildings = {
       "HEC Montréal": 0.421,
       "Polytechnique Montréal": 7.794
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Jarry Terraces 47": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -1719,11 +1719,11 @@ buildings = {
       "HEC Montréal": 6.493,
       "Polytechnique Montréal": 4.648
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "The Cherrier Place": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -1751,11 +1751,11 @@ buildings = {
       "HEC Montréal": 7.327,
       "Polytechnique Montréal": 0.407
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le St-Catherine Lofts": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -1784,11 +1784,11 @@ buildings = {
       "HEC Montréal": 5.613,
       "Polytechnique Montréal": 0.07
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Le Jarry Flats": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -1816,7 +1816,7 @@ buildings = {
       "HEC Montréal": 9.791,
       "Polytechnique Montréal": 8.975
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "The De Lorimier Gardens 46": {
     "accommodation": "Townhouse",
@@ -1845,11 +1845,11 @@ buildings = {
       "HEC Montréal": 5.779,
       "Polytechnique Montréal": 0.107
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Outremont Commons": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "1 Bedroom"
     ],
@@ -1873,7 +1873,7 @@ buildings = {
       "HEC Montréal": 0.059,
       "Polytechnique Montréal": 2.482
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La Beaubien Vista": {
     "accommodation": "Townhouse",
@@ -1907,11 +1907,11 @@ buildings = {
       "HEC Montréal": 7.034,
       "Polytechnique Montréal": 3.8
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les Édouard-Montpetit Manor": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -1938,11 +1938,11 @@ buildings = {
       "HEC Montréal": 1.062,
       "Polytechnique Montréal": 9.365
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Viger Place": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -1968,7 +1968,7 @@ buildings = {
       "HEC Montréal": 9.65,
       "Polytechnique Montréal": 6.698
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Cherrier Square": {
     "accommodation": "Townhouse",
@@ -1997,7 +1997,7 @@ buildings = {
       "HEC Montréal": 3.285,
       "Polytechnique Montréal": 3.972
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Drummond Lofts 17": {
     "accommodation": "Townhouse",
@@ -2027,11 +2027,11 @@ buildings = {
       "HEC Montréal": 9.485,
       "Polytechnique Montréal": 1.883
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La Atwater Vista": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom"
@@ -2059,7 +2059,7 @@ buildings = {
       "HEC Montréal": 7.334,
       "Polytechnique Montréal": 3.222
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Le Crescent Pavilions": {
     "accommodation": "Townhouse",
@@ -2090,11 +2090,11 @@ buildings = {
       "HEC Montréal": 0.194,
       "Polytechnique Montréal": 3.456
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Rosemont Tower": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2123,11 +2123,11 @@ buildings = {
       "HEC Montréal": 3.174,
       "Polytechnique Montréal": 1.052
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La St-Hubert Vista": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2156,11 +2156,11 @@ buildings = {
       "HEC Montréal": 1.403,
       "Polytechnique Montréal": 0.456
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le St-Denis Commons": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2189,11 +2189,11 @@ buildings = {
       "HEC Montréal": 0.179,
       "Polytechnique Montréal": 9.931
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La Édouard-Montpetit Maison": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "1 Bedroom"
     ],
@@ -2218,11 +2218,11 @@ buildings = {
       "HEC Montréal": 6.345,
       "Polytechnique Montréal": 9.148
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "The Gouin Parc 20": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -2250,11 +2250,11 @@ buildings = {
       "HEC Montréal": 3.748,
       "Polytechnique Montréal": 9.351
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Les St-Laurent Flats": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -2280,11 +2280,11 @@ buildings = {
       "HEC Montréal": 7.608,
       "Polytechnique Montréal": 7.092
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La St-Hubert Flats": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2312,11 +2312,11 @@ buildings = {
       "HEC Montréal": 6.318,
       "Polytechnique Montréal": 7.258
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La Drummond Residences 74": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2345,7 +2345,7 @@ buildings = {
       "HEC Montréal": 0.204,
       "Polytechnique Montréal": 7.281
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "The St-Catherine Gardens": {
     "accommodation": "Townhouse",
@@ -2377,11 +2377,11 @@ buildings = {
       "HEC Montréal": 3.816,
       "Polytechnique Montréal": 2.344
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La De Lorimier Tower": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2411,11 +2411,11 @@ buildings = {
       "HEC Montréal": 5.1,
       "Polytechnique Montréal": 7.183
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La Notre-Dame Square 38": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom"
@@ -2442,7 +2442,7 @@ buildings = {
       "HEC Montréal": 3.717,
       "Polytechnique Montréal": 0.492
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les De Lorimier Vista": {
     "accommodation": "Townhouse",
@@ -2472,11 +2472,11 @@ buildings = {
       "HEC Montréal": 6.803,
       "Polytechnique Montréal": 7.934
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Laurier Place": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2505,7 +2505,7 @@ buildings = {
       "HEC Montréal": 9.729,
       "Polytechnique Montréal": 0.37
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "Le St-Hubert Pavilions": {
     "accommodation": "Townhouse",
@@ -2538,11 +2538,11 @@ buildings = {
       "HEC Montréal": 3.964,
       "Polytechnique Montréal": 6.557
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La Beaubien-Est Manor": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "Studio",
       "1 Bedroom"
@@ -2568,11 +2568,11 @@ buildings = {
       "HEC Montréal": 7.574,
       "Polytechnique Montréal": 4.833
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le St-Denis Place": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -2600,11 +2600,11 @@ buildings = {
       "HEC Montréal": 6.887,
       "Polytechnique Montréal": 8.838
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le Beaubien Manor": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2632,11 +2632,11 @@ buildings = {
       "HEC Montréal": 0.323,
       "Polytechnique Montréal": 4.048
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Masson Tower 7": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2664,7 +2664,7 @@ buildings = {
       "HEC Montréal": 3.336,
       "Polytechnique Montréal": 1.016
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The St-Denis Lofts 20": {
     "accommodation": "Townhouse",
@@ -2695,11 +2695,11 @@ buildings = {
       "HEC Montréal": 7.019,
       "Polytechnique Montréal": 0.16
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The St-Laurent Lofts": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2727,11 +2727,11 @@ buildings = {
       "HEC Montréal": 0.093,
       "Polytechnique Montréal": 2.774
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Van Horne Parc 6": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2760,11 +2760,11 @@ buildings = {
       "HEC Montréal": 3.608,
       "Polytechnique Montréal": 0.159
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Villeray Parc 12": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -2793,11 +2793,11 @@ buildings = {
       "HEC Montréal": 8.053,
       "Polytechnique Montréal": 1.532
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les Laurier Pavilions 70": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -2824,11 +2824,11 @@ buildings = {
       "HEC Montréal": 1.723,
       "Polytechnique Montréal": 0.406
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "La St-Laurent Terraces": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2856,7 +2856,7 @@ buildings = {
       "HEC Montréal": 0.791,
       "Polytechnique Montréal": 5.202
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Mont-Royal Parc": {
     "accommodation": "Townhouse",
@@ -2884,11 +2884,11 @@ buildings = {
       "HEC Montréal": 3.028,
       "Polytechnique Montréal": 0.459
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le St-Catherine Manor": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2918,11 +2918,11 @@ buildings = {
       "HEC Montréal": 7.575,
       "Polytechnique Montréal": 9.88
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Bishop Square 67": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -2951,11 +2951,11 @@ buildings = {
       "HEC Montréal": 4.585,
       "Polytechnique Montréal": 3.774
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Les St-Hubert Manor": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -2983,11 +2983,11 @@ buildings = {
       "HEC Montréal": 3.822,
       "Polytechnique Montréal": 5.239
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "Le De Bullion Vista 50": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom",
@@ -3015,11 +3015,11 @@ buildings = {
       "HEC Montréal": 8.765,
       "Polytechnique Montréal": 5.711
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La Bishop Parc 89": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "Studio",
       "1 Bedroom"
@@ -3046,11 +3046,11 @@ buildings = {
       "HEC Montréal": 5.016,
       "Polytechnique Montréal": 5.946
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The Milton Lofts": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "1 Bedroom",
       "2 Bedrooms"
@@ -3078,11 +3078,11 @@ buildings = {
       "HEC Montréal": 3.655,
       "Polytechnique Montréal": 6.708
     },
-    "within_500m_metro": "yes"
+    "within_500m_metro": "Yes"
   },
   "The De Bullion Pavilions 3": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "no",
+    "over_ten_floors": "No",
     "unit_types": [
       "Studio",
       "1 Bedroom"
@@ -3109,11 +3109,11 @@ buildings = {
       "HEC Montréal": 0.475,
       "Polytechnique Montréal": 3.108
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   },
   "La Bishop Commons": {
     "accommodation": "Condo/Apartment",
-    "over_ten_floors": "yes",
+    "over_ten_floors": "Yes",
     "unit_types": [
       "Studio",
       "1 Bedroom"
@@ -3139,6 +3139,6 @@ buildings = {
       "HEC Montréal": 8.601,
       "Polytechnique Montréal": 7.315
     },
-    "within_500m_metro": "no"
+    "within_500m_metro": "No"
   }
 }
