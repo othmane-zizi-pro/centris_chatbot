@@ -1,0 +1,266 @@
+import streamlit as st
+import numpy as np
+from numpy.linalg import norm
+import plotly.graph_objects as go
+from buildings_data import buildings  # Import the buildings dictionary
+
+
+# Define option dictionaries
+universities_dict = {
+    "1": "McGill University",
+    "2": "Concordia University",
+    "3": "Université de Montréal",
+    "4": "HEC Montréal",
+    "5": "Polytechnique Montréal"
+}
+accommodation_dict = {
+    "1": "Condo/Apartment",
+    "2": "Townhouse",
+    "3": "No Preference"
+}
+bedrooms_townhouse_dict = {
+    "1": "2 Bedrooms",
+    "2": "3 Bedrooms",
+    "3": "4+ Bedrooms"
+}
+bedrooms_condo_dict = {
+    "1": "Studio",
+    "2": "1 Bedroom",
+    "3": "2 Bedrooms"
+}
+bedrooms_nopref_dict = {
+    "1": "Studio",
+    "2": "1 Bedroom",
+    "3": "2 Bedrooms",
+    "4": "3 Bedrooms",
+    "5": "4+ Bedrooms"
+}
+amenities_dict = {
+    "1": "Gym",
+    "2": "Indoor Pool",
+    "3": "Outdoor Pool",
+    "4": "Garden",
+    "5": "Patio",
+    "6": "Library",
+    "7": "Social Room",
+    "8": "Sauna",
+    "9": "Jacuzzi",
+    "10": "BBQ",
+    "11": "Laundry Room"
+}
+appliances_dict = {
+    "1": "Dishwasher",
+    "2": "In-unit Washing Machine",
+    "3": "In-unit Dryer",
+    "4": "A/C",
+    "5": "Heater",
+    "6": "Microwave"
+}
+yes_no_dict = {
+    "1": "yes",
+    "2": "no preference"
+}
+
+# Streamlit app layout
+st.title("Building Recommendation System")
+
+name = st.text_input("Please enter your name:")
+
+st.header("University")
+university_key = st.selectbox("What university will you be attending?", list(universities_dict.keys()), format_func=lambda k: universities_dict[k])
+university = universities_dict[university_key]
+
+st.header("Distance Preferences")
+campus_dist_key = st.radio("Do you want to be within 1 km from campus?", list(yes_no_dict.keys()), format_func=lambda k: yes_no_dict[k].capitalize())
+campus_dist = yes_no_dict[campus_dist_key]
+
+metro_dist_key = st.radio("Do you want to be within 500 m from a metro station?", list(yes_no_dict.keys()), format_func=lambda k: yes_no_dict[k].capitalize())
+metro_dist = yes_no_dict[metro_dist_key]
+
+st.header("Accommodation Type")
+acc_key = st.selectbox("What type of accommodation are you looking for?", list(accommodation_dict.keys()), format_func=lambda k: accommodation_dict[k])
+accommodation = accommodation_dict[acc_key]
+
+st.header("Number of Bedrooms")
+if accommodation == "Townhouse":
+    bedrooms_key = st.selectbox("How many bedrooms do you want?", list(bedrooms_townhouse_dict.keys()), format_func=lambda k: bedrooms_townhouse_dict[k])
+    bedrooms = bedrooms_townhouse_dict[bedrooms_key]
+elif accommodation == "Condo/Apartment":
+    bedrooms_key = st.selectbox("How many bedrooms do you want?", list(bedrooms_condo_dict.keys()), format_func=lambda k: bedrooms_condo_dict[k])
+    bedrooms = bedrooms_condo_dict[bedrooms_key]
+else:
+    bedrooms_key = st.selectbox("How many bedrooms do you want?", list(bedrooms_nopref_dict.keys()), format_func=lambda k: bedrooms_nopref_dict[k])
+    bedrooms = bedrooms_nopref_dict[bedrooms_key]
+
+st.header("Building Height")
+if accommodation != "Townhouse":
+    ten_floors_key = st.radio("Do you want your building to be taller than 10 floors?", list(yes_no_dict.keys()), format_func=lambda k: yes_no_dict[k].capitalize())
+    ten_floors = yes_no_dict[ten_floors_key]
+else:
+    ten_floors = 'Not Applicable'
+
+st.header("Price Range")
+min_price = st.number_input("What is your minimum price per month?", min_value=0, value=0)
+max_price = st.number_input("What is your maximum price per month?", min_value=0, value=10000)
+if max_price < min_price:
+    st.error("Maximum price cannot be less than minimum price.")
+
+st.header("Amenities (up to 3)")
+no_amen_pref = st.checkbox("No Preference for Amenities")
+if no_amen_pref:
+    amenities_selected = 'no preference'
+else:
+    amenities_options = [amenities_dict[k] for k in amenities_dict]
+    amenities_selected = st.multiselect("Select up to 3 amenities:", amenities_options, max_selections=3)
+
+st.header("Appliances (up to 3)")
+no_app_pref = st.checkbox("No Preference for Appliances")
+if no_app_pref:
+    appliances_selected = 'no preference'
+else:
+    appliances_options = [appliances_dict[k] for k in appliances_dict]
+    appliances_selected = st.multiselect("Select up to 3 appliances:", appliances_options, max_selections=3)
+
+# Collect preferences
+preferences = {
+    "name": name,
+    "university": university,
+    "within_1km_campus": campus_dist,
+    "within_500m_metro": metro_dist,
+    "accommodation": accommodation,
+    "bedrooms": bedrooms,
+    "over_ten_floors": ten_floors,
+    "min_price": min_price,
+    "max_price": max_price,
+    "amenities": amenities_selected,
+    "appliances": appliances_selected
+}
+
+if st.button("Get Recommendations"):
+    st.write("User Preferences:", preferences)
+
+    # Recommend function (adapted from your code)
+    def recommend(preferences, buildings):
+        university = preferences['university']
+        within_campus = preferences['within_1km_campus']
+        within_metro = preferences['within_500m_metro']
+        acc = preferences['accommodation']
+        bedrooms = preferences['bedrooms']
+        over_ten = preferences['over_ten_floors']
+        min_p = preferences['min_price']
+        max_p = preferences['max_price']
+        amens = preferences['amenities']
+        if amens == 'no preference':
+            amens = []
+        apps = preferences['appliances']
+        if apps == 'no preference':
+            apps = []
+        # Define all possible categories for vectorization
+        all_accom = ["Condo/Apartment", "Townhouse"]
+        all_beds = ["Studio", "1 Bedroom", "2 Bedrooms", "3 Bedrooms", "4+ Bedrooms"]
+        all_amen = ["Gym", "Indoor Pool", "Outdoor Pool", "Garden", "Patio", "Library", "Social Room", "Sauna", "Jacuzzi", "BBQ", "Laundry Room"]
+        all_app = ["Dishwasher", "In-unit Washing Machine", "In-unit Dryer", "A/C", "Heater", "Microwave"]
+        # User vector components
+        # Accommodation
+        user_accom = [1 if acc == a else 0 for a in all_accom]
+        if acc == "No Preference":
+            user_accom = [0] * len(all_accom)
+        
+        # Over ten floors
+        user_floors = 1 if over_ten == 'yes' else 0
+        
+        # Bedrooms (user selects one specific)
+        user_beds = [1 if bedrooms == b else 0 for b in all_beds]
+        
+        # Amenities
+        user_amen = [1 if a in amens else 0 for a in all_amen]
+        
+        # Appliances
+        user_app = [1 if a in apps else 0 for a in all_app]
+        
+        # Close to campus
+        user_close_campus = 1 if within_campus == 'yes' else 0
+        
+        # Close to metro
+        user_close_metro = 1 if within_metro == 'yes' else 0
+        
+        # Affordability (always care)
+        user_afford = 1
+        # Full user vector
+        user_vec = np.array(user_accom + [user_floors] + user_beds + user_amen + user_app + [user_close_campus, user_close_metro, user_afford])
+        user_norm = norm(user_vec)
+        if user_norm == 0:
+            st.error("Unable to compute similarities due to empty preference vector.")
+            return
+        # Compute similarities for ALL buildings
+        sims = []
+        for name, data in buildings.items():
+            # Building vector components
+            b_accom = [1 if data.get('accommodation') == a else 0 for a in all_accom]
+            b_floors = 1 if data.get('over_ten_floors') == 'yes' else 0
+            b_beds = [1 if b in data.get('unit_types', []) else 0 for b in all_beds]
+            b_amen = [1 if a in data.get('amenities', []) else 0 for a in all_amen]
+            b_app = [1 if a in data.get('appliances', []) else 0 for a in all_app]
+            dist = data.get('distance_to_campuses_km', {}).get(university, float('inf'))
+            b_close_campus = 1 / (1 + dist) if dist != float('inf') else 0
+            b_close_metro = 1 if data.get('within_500m_metro') == 'yes' else 0
+            if bedrooms in data.get('prices_monthly', {}):
+                price = data['prices_monthly'][bedrooms]
+            else:
+                price = float('inf')
+            if price == float('inf'):
+                b_afford = 0
+            else:
+                center = (min_p + max_p) / 2
+                width = (max_p - min_p) / 2 + 1e-6
+                b_afford = np.exp( - ((price - center) / width) ** 2 )
+            b_vec = np.array(b_accom + [b_floors] + b_beds + b_amen + b_app + [b_close_campus, b_close_metro, b_afford])
+            b_norm = norm(b_vec)
+            if b_norm == 0:
+                sim = 0.0
+            else:
+                sim = np.dot(user_vec, b_vec) / (user_norm * b_norm)
+            sims.append((sim, name))
+        
+        # Sort and display top 10
+        sims.sort(reverse=True, key=lambda x: x[0])
+    
+        st.header("Recommended buildings (sorted by cosine similarity):")
+    
+        # Create Plotly bar graph for top 10 buildings
+        names = [name for _, name in sims[:10]]
+        scores = [sim for sim, _ in sims[:10]]
+        colors = ['red' if i == 0 else 'blue' for i in range(len(names))]  # Red for highest, blue for others
+        text = ['recommended' if i == 0 else '' for i in range(len(names))]  # Label for highest
+        
+        fig = go.Figure(data=[
+            go.Bar(
+                x=names,
+                y=scores,
+                marker_color=colors,
+                text=text,
+                textposition='auto'
+            )
+        ])
+        fig.update_layout(
+            title="Top 10 Recommended Buildings by Similarity Score",
+            xaxis_title="Building Name",
+            yaxis_title="Similarity Score",
+            showlegend=False
+        )
+        st.plotly_chart(fig)
+    
+        for sim, name in sims[:10]:  # Top 10
+            st.write(f"{name}: similarity score {sim:.4f}")
+            data = buildings.get(name, {})
+            st.write(f" Accommodation: {data.get('accommodation', 'Unknown')}")
+            st.write(f" Unit Types: {', '.join(data.get('unit_types', [])) or 'None'}")
+            st.write(f" Amenities: {', '.join(data.get('amenities', [])) or 'None'}")
+            st.write(f" Appliances: {', '.join(data.get('appliances', [])) or 'None'}")
+            st.write(f" Distance to {university}: {data.get('distance_to_campuses_km', {}).get(university, 'Unknown')} km")
+            st.write(f" Within 500m of Metro: {data.get('within_500m_metro', 'Unknown')}")
+            st.write(f" Prices Monthly: {', '.join([f'{k}: ${v}' for k, v in data.get('prices_monthly', {}).items()]) or 'None'}")
+            st.write(f" Over 10 Floors: {data.get('over_ten_floors', 'Unknown')}")
+            st.write()  # Empty line for readability
+
+    recommend(preferences, buildings)
