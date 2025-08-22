@@ -104,21 +104,30 @@ max_price = st.number_input("What is your maximum price per month?", min_value=0
 if max_price < min_price:
     st.error("Maximum price cannot be less than minimum price.")
 
+# Define callbacks to clear selections
+def clear_amenities():
+    if st.session_state.no_amen_pref:
+        st.session_state.amenities_multi = []
+
+def clear_appliances():
+    if st.session_state.no_app_pref:
+        st.session_state.appliances_multi = []
+
 st.header("Amenities (up to 3)")
-no_amen_pref = st.checkbox("No Preference for Amenities")
-if no_amen_pref:
+st.checkbox("No Preference for Amenities", key="no_amen_pref", on_change=clear_amenities)
+if st.session_state.no_amen_pref:
     amenities_selected = 'no preference'
 else:
     amenities_options = [amenities_dict[k] for k in amenities_dict]
-    amenities_selected = st.multiselect("Select up to 3 amenities:", amenities_options, max_selections=3)
+    amenities_selected = st.multiselect("Select up to 3 amenities:", amenities_options, max_selections=3, key="amenities_multi")
 
 st.header("Appliances (up to 3)")
-no_app_pref = st.checkbox("No Preference for Appliances")
-if no_app_pref:
+st.checkbox("No Preference for Appliances", key="no_app_pref", on_change=clear_appliances)
+if st.session_state.no_app_pref:
     appliances_selected = 'no preference'
 else:
     appliances_options = [appliances_dict[k] for k in appliances_dict]
-    appliances_selected = st.multiselect("Select up to 3 appliances:", appliances_options, max_selections=3)
+    appliances_selected = st.multiselect("Select up to 3 appliances:", appliances_options, max_selections=3, key="appliances_multi")
 
 # Collect preferences
 preferences = {
@@ -239,6 +248,27 @@ if st.button("Get Recommendations"):
     
         st.header("Recommended buildings (sorted by cosine similarity):")
     
+        # Display top building before graph
+        st.subheader("Top Building Recommendation")
+        top_sim, top_name = sims[0]
+        st.markdown(f"**1. {top_name}**: *similarity score {top_sim:.4f}*")
+        top_data = buildings.get(top_name, {})
+        st.write(f"**Accommodation:** {top_data.get('accommodation', 'Unknown')}")
+        st.write(f"**Unit Types:** {', '.join(top_data.get('unit_types', [])) or 'None'}")
+        st.write(f"**Amenities:** {', '.join(top_data.get('amenities', [])) or 'None'}")
+        st.write(f"**Appliances:** {', '.join(top_data.get('appliances', [])) or 'None'}")
+        st.write(f"**Distance to {university}:** {top_data.get('distance_to_campuses_km', {}).get(university, 'Unknown')} km")
+        st.write(f"**Within 500m of Metro:** {top_data.get('within_500m_metro', 'Unknown')}")
+        st.write("**Prices Monthly:**")
+        prices = top_data.get('prices_monthly', {})
+        if prices:
+            for k, v in prices.items():
+                st.write(f"- {k}: ${v}")
+        else:
+            st.write("None")
+        st.write(f"**Over 10 Floors:** {top_data.get('over_ten_floors', 'Unknown')}")
+        st.markdown("---")  # Separator before graph
+    
         # Create Plotly bar graph for top 10 buildings
         names = [name for _, name in sims[:10]]
         scores = [sim for sim, _ in sims[:10]]
@@ -262,8 +292,9 @@ if st.button("Get Recommendations"):
         )
         st.plotly_chart(fig)
     
-        for sim, name in sims[:10]:  # Top 10
-            st.markdown(f"**{name}**: *similarity score {sim:.4f}*")
+        # Display remaining 9 buildings after graph
+        for i, (sim, name) in enumerate(sims[1:10], start=2):  # Skip the first (already shown)
+            st.markdown(f"**{i}. {name}**: *similarity score {sim:.4f}*")
             data = buildings.get(name, {})
             st.write(f"**Accommodation:** {data.get('accommodation', 'Unknown')}")
             st.write(f"**Unit Types:** {', '.join(data.get('unit_types', [])) or 'None'}")
