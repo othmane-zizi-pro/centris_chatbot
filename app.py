@@ -55,7 +55,7 @@ appliances_dict = {
     "5": "Heater",
     "6": "Microwave"
 }
-Yes_no_dict = {
+yes_no_dict = {
     "1": "No preference",
     "2": "Yes"
 }
@@ -70,11 +70,11 @@ university_key = st.selectbox("What university will you be attending?", list(uni
 university = universities_dict[university_key]
 
 st.header("Distance Preferences")
-campus_dist_key = st.radio("Do you want to be within 1 km from campus?", list(Yes_no_dict.keys()), format_func=lambda k: Yes_no_dict[k].capitalize())
-campus_dist = Yes_no_dict[campus_dist_key]
+campus_dist_key = st.radio("Do you want to be within 1 km from campus?", list(yes_no_dict.keys()), format_func=lambda k: yes_no_dict[k].capitalize())
+campus_dist = yes_no_dict[campus_dist_key]
 
-metro_dist_key = st.radio("Do you want to be within 500 m from a metro station?", list(Yes_no_dict.keys()), format_func=lambda k: Yes_no_dict[k].capitalize())
-metro_dist = Yes_no_dict[metro_dist_key]
+metro_dist_key = st.radio("Do you want to be within 500 m from a metro station?", list(yes_no_dict.keys()), format_func=lambda k: yes_no_dict[k].capitalize())
+metro_dist = yes_no_dict[metro_dist_key]
 
 st.header("Accommodation Type")
 acc_key = st.selectbox("What type of accommodation are you looking for?", list(accommodation_dict.keys()), format_func=lambda k: accommodation_dict[k])
@@ -93,8 +93,8 @@ else:
 
 st.header("Building Height")
 if accommodation != "Townhouse":
-    ten_floors_key = st.radio("Do you want your building to be taller than 10 floors?", list(Yes_no_dict.keys()), format_func=lambda k: Yes_no_dict[k].capitalize())
-    ten_floors = Yes_no_dict[ten_floors_key]
+    ten_floors_key = st.radio("Do you want your building to be taller than 10 floors?", list(yes_no_dict.keys()), format_func=lambda k: yes_no_dict[k].capitalize())
+    ten_floors = yes_no_dict[ten_floors_key]
 else:
     ten_floors = 'Not Applicable'
 
@@ -216,15 +216,15 @@ if st.button("Get Recommendations"):
         # Compute similarities for ALL buildings
         sims = []
         for name, data in buildings.items():
-            # Building vector components
-            b_accom = [1 if data.get('accommodation') == a else 0 for a in all_accom]
-            b_floors = 1 if data.get('over_ten_floors') == 'Yes' else 0
+            # Building vector components, neutralized if no user preference
+            b_accom = [1 if data.get('accommodation') == a else 0 for a in all_accom] if acc != "No Preference" else [0] * len(all_accom)
+            b_floors = 1 if data.get('over_ten_floors') == 'yes' else 0 if over_ten == 'Yes' else 0
             b_beds = [1 if b in data.get('unit_types', []) else 0 for b in all_beds]
-            b_amen = [1 if a in data.get('amenities', []) else 0 for a in all_amen]
-            b_app = [1 if a in data.get('appliances', []) else 0 for a in all_app]
+            b_amen = [1 if a in data.get('amenities', []) else 0 for a in all_amen] if amens else [0] * len(all_amen)
+            b_app = [1 if a in data.get('appliances', []) else 0 for a in all_app] if apps else [0] * len(all_app)
             dist = data.get('distance_to_campuses_km', {}).get(university, float('inf'))
-            b_close_campus = 1 / (1 + dist) if dist != float('inf') else 0
-            b_close_metro = 1 if data.get('within_500m_metro') == 'Yes' else 0
+            b_close_campus = 1 / (1 + dist) if dist != float('inf') and within_campus == 'Yes' else 0
+            b_close_metro = 1 if data.get('within_500m_metro') == 'yes' and within_metro == 'Yes' else 0
             if bedrooms in data.get('prices_monthly', {}):
                 price = data['prices_monthly'][bedrooms]
             else:
