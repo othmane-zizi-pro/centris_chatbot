@@ -55,9 +55,9 @@ appliances_dict = {
     "5": "Heater",
     "6": "Microwave"
 }
-yes_no_dict = {
-    "1": "no preference",
-    "2": "yes"
+Yes_no_dict = {
+    "1": "No preference",
+    "2": "Yes"
 }
 
 # Streamlit app layout
@@ -70,11 +70,11 @@ university_key = st.selectbox("What university will you be attending?", list(uni
 university = universities_dict[university_key]
 
 st.header("Distance Preferences")
-campus_dist_key = st.radio("Do you want to be within 1 km from campus?", list(yes_no_dict.keys()), format_func=lambda k: yes_no_dict[k].capitalize())
-campus_dist = yes_no_dict[campus_dist_key]
+campus_dist_key = st.radio("Do you want to be within 1 km from campus?", list(Yes_no_dict.keys()), format_func=lambda k: Yes_no_dict[k].capitalize())
+campus_dist = Yes_no_dict[campus_dist_key]
 
-metro_dist_key = st.radio("Do you want to be within 500 m from a metro station?", list(yes_no_dict.keys()), format_func=lambda k: yes_no_dict[k].capitalize())
-metro_dist = yes_no_dict[metro_dist_key]
+metro_dist_key = st.radio("Do you want to be within 500 m from a metro station?", list(Yes_no_dict.keys()), format_func=lambda k: Yes_no_dict[k].capitalize())
+metro_dist = Yes_no_dict[metro_dist_key]
 
 st.header("Accommodation Type")
 acc_key = st.selectbox("What type of accommodation are you looking for?", list(accommodation_dict.keys()), format_func=lambda k: accommodation_dict[k])
@@ -93,8 +93,8 @@ else:
 
 st.header("Building Height")
 if accommodation != "Townhouse":
-    ten_floors_key = st.radio("Do you want your building to be taller than 10 floors?", list(yes_no_dict.keys()), format_func=lambda k: yes_no_dict[k].capitalize())
-    ten_floors = yes_no_dict[ten_floors_key]
+    ten_floors_key = st.radio("Do you want your building to be taller than 10 floors?", list(Yes_no_dict.keys()), format_func=lambda k: Yes_no_dict[k].capitalize())
+    ten_floors = Yes_no_dict[ten_floors_key]
 else:
     ten_floors = 'Not Applicable'
 
@@ -116,7 +116,7 @@ def clear_appliances():
 st.header("Amenities (up to 3)")
 st.checkbox("No Preference for Amenities", key="no_amen_pref", on_change=clear_amenities)
 if st.session_state.no_amen_pref:
-    amenities_selected = 'no preference'
+    amenities_selected = 'No preference'
 else:
     amenities_options = [amenities_dict[k] for k in amenities_dict]
     amenities_selected = st.multiselect("Select up to 3 amenities:", amenities_options, max_selections=3, key="amenities_multi")
@@ -124,7 +124,7 @@ else:
 st.header("Appliances (up to 3)")
 st.checkbox("No Preference for Appliances", key="no_app_pref", on_change=clear_appliances)
 if st.session_state.no_app_pref:
-    appliances_selected = 'no preference'
+    appliances_selected = 'No preference'
 else:
     appliances_options = [appliances_dict[k] for k in appliances_dict]
     appliances_selected = st.multiselect("Select up to 3 appliances:", appliances_options, max_selections=3, key="appliances_multi")
@@ -171,10 +171,10 @@ if st.button("Get Recommendations"):
         min_p = preferences['min_price']
         max_p = preferences['max_price']
         amens = preferences['amenities']
-        if amens == 'no preference':
+        if amens == 'No preference':
             amens = []
         apps = preferences['appliances']
-        if apps == 'no preference':
+        if apps == 'No preference':
             apps = []
         # Define all possible categories for vectorization
         all_accom = ["Condo/Apartment", "Townhouse"]
@@ -188,7 +188,7 @@ if st.button("Get Recommendations"):
             user_accom = [0] * len(all_accom)
         
         # Over ten floors
-        user_floors = 1 if over_ten == 'yes' else 0
+        user_floors = 1 if over_ten == 'Yes' else 0
         
         # Bedrooms (user selects one specific)
         user_beds = [1 if bedrooms == b else 0 for b in all_beds]
@@ -200,10 +200,10 @@ if st.button("Get Recommendations"):
         user_app = [1 if a in apps else 0 for a in all_app]
         
         # Close to campus
-        user_close_campus = 1 if within_campus == 'yes' else 0
+        user_close_campus = 1 if within_campus == 'Yes' else 0
         
         # Close to metro
-        user_close_metro = 1 if within_metro == 'yes' else 0
+        user_close_metro = 1 if within_metro == 'Yes' else 0
         
         # Affordability (always care)
         user_afford = 1
@@ -218,13 +218,13 @@ if st.button("Get Recommendations"):
         for name, data in buildings.items():
             # Building vector components
             b_accom = [1 if data.get('accommodation') == a else 0 for a in all_accom]
-            b_floors = 1 if data.get('over_ten_floors') == 'yes' else 0
+            b_floors = 1 if data.get('over_ten_floors') == 'Yes' else 0
             b_beds = [1 if b in data.get('unit_types', []) else 0 for b in all_beds]
             b_amen = [1 if a in data.get('amenities', []) else 0 for a in all_amen]
             b_app = [1 if a in data.get('appliances', []) else 0 for a in all_app]
             dist = data.get('distance_to_campuses_km', {}).get(university, float('inf'))
             b_close_campus = 1 / (1 + dist) if dist != float('inf') else 0
-            b_close_metro = 1 if data.get('within_500m_metro') == 'yes' else 0
+            b_close_metro = 1 if data.get('within_500m_metro') == 'Yes' else 0
             if bedrooms in data.get('prices_monthly', {}):
                 price = data['prices_monthly'][bedrooms]
             else:
